@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 const SecondButton = styled.div`
   width: 65px;
-  height: 65px;
+  height: ${(props) => (props.isEqualSign ? "132px" : "65px")};
   border-radius: 5.2px;
   background-color: #f0f0f0;
   display: flex;
@@ -17,6 +17,8 @@ const SecondButton = styled.div`
       rgba(255, 255, 255, 0) 0%
     ),
     linear-gradient(to bottom, #f0f0f0, #f0f0f0);
+  grid-row: ${(props) => (props.isEqualSign ? "4/6" : "auto")};
+  grid-column: ${(props) => (props.isEqualSign ? "4/5" : "auto")};
 `;
 
 const Styledbutton = styled.button`
@@ -24,9 +26,9 @@ const Styledbutton = styled.button`
   font-size: 31.2px;
   font-weight: 600;
   text-align: center;
-  color: #1e1e1e;
+  color: ${(props) => (props.isEqualSign ? "#FFCC48" : "#1e1e1e")};
   width: 45.89px;
-  height: 45.89px;
+  height: ${(props) => (props.isEqualSign ? "91.78px" : "45.89px")};
   border: none;
   border-radius: 10.45px;
   cursor: pointer;
@@ -37,8 +39,9 @@ const Styledbutton = styled.button`
 `;
 
 const Button = ({ children, ...props }) => {
+  console.log(props);
   return (
-    <SecondButton>
+    <SecondButton {...props}>
       <Styledbutton {...props}>{children}</Styledbutton>
     </SecondButton>
   );
