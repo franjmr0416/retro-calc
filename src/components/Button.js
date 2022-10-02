@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const SecondButton = styled.div`
-  width: 65px;
+  width: ${(props) => (props.isZeroSign ? "1/3" : "65px")};
   height: ${(props) => (props.isEqualSign ? "132px" : "65px")};
   border-radius: 5.2px;
   background-color: #f0f0f0;
@@ -17,8 +17,8 @@ const SecondButton = styled.div`
       rgba(255, 255, 255, 0) 0%
     ),
     linear-gradient(to bottom, #f0f0f0, #f0f0f0);
-  grid-row: ${(props) => (props.isEqualSign ? "4/6" : "auto")};
-  grid-column: ${(props) => (props.isEqualSign ? "4/5" : "auto")};
+  ${(props) => (props.isEqualSign ? `grid-row: 4/6; grid-column: 4/5` : ``)}
+  ${(props) => (props.isZeroSign ? `grid-row: 5/5; grid-column: 1/3` : ``)}
 `;
 
 const Styledbutton = styled.button`
@@ -27,7 +27,7 @@ const Styledbutton = styled.button`
   font-weight: 600;
   text-align: center;
   color: ${(props) => (props.isEqualSign ? "#FFCC48" : "#1e1e1e")};
-  width: 45.89px;
+  width: ${(props) => (props.isZeroSign ? "91.78px" : "45.89px")};
   height: ${(props) => (props.isEqualSign ? "91.78px" : "45.89px")};
   border: none;
   border-radius: 10.45px;

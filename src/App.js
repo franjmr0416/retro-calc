@@ -25,7 +25,7 @@ const App = () => {
         <Button>3</Button>
 
         <Button isEqualSign>=</Button>
-        <Button>0</Button>
+        <Button isZeroSign>0</Button>
         <Button>.</Button>
       </LayoutButtons>
     </div>
