@@ -5,20 +5,20 @@ const App = () => {
   return (
     <div className="home">
       <LayoutButtons>
-        <Button>AC</Button>
-        <Button>%</Button>
-        <Button>+</Button>
-        <Button>-</Button>
+        <Button isAC>AC</Button>
+        <Button isOperator>%</Button>
+        <Button isOperator>+</Button>
+        <Button isOperator>-</Button>
 
         <Button>7</Button>
         <Button>8</Button>
         <Button>9</Button>
-        <Button>&times;</Button>
+        <Button isOperator>&times;</Button>
 
         <Button>4</Button>
         <Button>5</Button>
         <Button>6</Button>
-        <Button>&divide;</Button>
+        <Button isOperator>&divide;</Button>
 
         <Button>1</Button>
         <Button>2</Button>

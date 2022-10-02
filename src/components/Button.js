@@ -17,7 +17,17 @@ const SecondButton = styled.div`
       rgba(255, 255, 255, 0) 0%
     ),
     linear-gradient(to bottom, #f0f0f0, #f0f0f0);
-  ${(props) => (props.isEqualSign ? `grid-row: 4/6; grid-column: 4/5` : ``)}
+  ${(props) =>
+    props.isEqualSign
+      ? `grid-row: 4/6; 
+      grid-column: 4/5; 
+      background-image: linear-gradient(
+      to left,
+      #9a9a9a 100%,
+      rgba(154, 154, 154, 0) 0%
+    ),
+    linear-gradient(to bottom, #b5b5b5, #9a9a9a);`
+      : ``}
   ${(props) => (props.isZeroSign ? `grid-row: 5/5; grid-column: 1/3` : ``)}
 `;
 
@@ -26,7 +36,7 @@ const Styledbutton = styled.button`
   font-size: 31.2px;
   font-weight: 600;
   text-align: center;
-  color: ${(props) => (props.isEqualSign ? "#FFCC48" : "#1e1e1e")};
+  color: ${(props) => (props.isOperator ? "#F07032" : "#1e1e1e")};
   width: ${(props) => (props.isZeroSign ? "91.78px" : "45.89px")};
   height: ${(props) => (props.isEqualSign ? "91.78px" : "45.89px")};
   border: none;
@@ -36,6 +46,15 @@ const Styledbutton = styled.button`
     inset 0 -2px 0 0 rgba(62, 64, 65, 0.5);
   background-image: linear-gradient(to top, #fff 50%, rgba(255, 255, 255, 0)),
     linear-gradient(to bottom, #f0f0f0, #f0f0f0);
+  ${(props) =>
+    props.isAC ? `color: #C5441F; font-size: 26px; font-weight: 700;` : ``}
+  ${(props) =>
+    props.isEqualSign
+      ? `color: #fff; 
+      font-size: 26px; 
+      background-image: linear-gradient(to top, #9a9a9a 50%, rgba(154, 154, 154, 0)),
+    linear-gradient(to bottom, #b5b5b5, #9a9a9a);`
+      : ``}
 `;
 
 const Button = ({ children, ...props }) => {
