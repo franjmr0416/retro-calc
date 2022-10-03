@@ -1,9 +1,11 @@
 import Button from "./components/Button";
 import "./App.css";
 import LayoutButtons from "./components/LayoutButtons";
+import Display from "./components/Display";
 const App = () => {
   return (
     <div className="home">
+      <Display />
       <LayoutButtons>
         <Button isAC>AC</Button>
         <Button isOperator>%</Button>
