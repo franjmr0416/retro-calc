@@ -7,6 +7,15 @@ const App = () => {
   const [input, setInput] = useState('0')
   const [currentStack, setStack] = useState([])
 
+  const calc = () => {
+    try {
+      const result = eval(input)
+      setInput(result)
+    } catch (error) {
+      error instanceof SyntaxError ? setInput('Syntax_Error') : setInput(error)
+    }
+  }
+
   const handleClick = (value) => {
     switch (value) {
       case 'AC':
@@ -14,6 +23,7 @@ const App = () => {
         setInput('0')
         break
       case '=':
+        calc()
         break
       default:
         setStack([...currentStack, value])
