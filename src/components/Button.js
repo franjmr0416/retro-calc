@@ -1,8 +1,8 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 const SecondButton = styled.div`
-  width: ${(props) => (props.isZeroSign ? "1/3" : "65px")};
-  height: ${(props) => (props.isEqualSign ? "132px" : "65px")};
+  width: ${(props) => (props.isZeroSign ? '1/3' : '65px')};
+  height: ${(props) => (props.isEqualSign ? '132px' : '65px')};
   border-radius: 5.2px;
   background-color: #f0f0f0;
   display: flex;
@@ -29,16 +29,16 @@ const SecondButton = styled.div`
     linear-gradient(to bottom, #b5b5b5, #9a9a9a);`
       : ``}
   ${(props) => (props.isZeroSign ? `grid-row: 5/5; grid-column: 1/3` : ``)}
-`;
+`
 
 const Styledbutton = styled.button`
   font-family: Jura;
   font-size: 31.2px;
   font-weight: 600;
   text-align: center;
-  color: ${(props) => (props.isOperator ? "#F07032" : "#1e1e1e")};
-  width: ${(props) => (props.isZeroSign ? "91.78px" : "45.89px")};
-  height: ${(props) => (props.isEqualSign ? "91.78px" : "45.89px")};
+  color: ${(props) => (props.isOperator ? '#F07032' : '#1e1e1e')};
+  width: ${(props) => (props.isZeroSign ? '91.78px' : '45.89px')};
+  height: ${(props) => (props.isEqualSign ? '91.78px' : '45.89px')};
   border: none;
   border-radius: 10.45px;
   cursor: pointer;
@@ -55,13 +55,15 @@ const Styledbutton = styled.button`
       background-image: linear-gradient(to top, #9a9a9a 50%, rgba(154, 154, 154, 0)),
     linear-gradient(to bottom, #b5b5b5, #9a9a9a);`
       : ``}
-`;
+`
 
-const Button = ({ children, ...props }) => {
+const Button = ({ children, onClick, ...props }) => {
   return (
-    <SecondButton {...props}>
-      <Styledbutton {...props}>{children}</Styledbutton>
+    <SecondButton onClick={onClick} {...props}>
+      <Styledbutton onClick={onClick} {...props}>
+        {children}
+      </Styledbutton>
     </SecondButton>
-  );
-};
-export default Button;
+  )
+}
+export default Button
