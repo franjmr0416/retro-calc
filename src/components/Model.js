@@ -21,7 +21,7 @@ const Model = () => {
     <Background>
       <Text>
         <Brand>Atomic </Brand>
-        NXS-102
+        RMS-932
       </Text>
     </Background>
   )
