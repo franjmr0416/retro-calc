@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 const Center = styled.div`
+  margin-top: 2rem;
   display: flex;
   justify-content: center;
 `

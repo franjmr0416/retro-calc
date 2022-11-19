@@ -3,7 +3,7 @@ import styled from 'styled-components'
 const Input = styled.input`
   border: none;
   width: 252px;
-  height: 61px;
+  height: fit-content;
   background-color: rgb(0, 0, 0, 0);
   color: #ffa3a3;
   text-align: right;
@@ -14,20 +14,22 @@ const Input = styled.input`
 
 const Screen = styled.div`
   width: 256px;
-  height: 65px;
-  border: 2px solid #fefefe;
+  height: fit-content;
+  border-radius: 5px;
   background-color: #380e08;
 `
 
 const Container = styled.div`
   width: 266px;
-  height: 75px;
-  border: 2px solid #fefefe;
-  border-radius: 5px;
+  height: fit-content;
+  padding: 0.5rem 0;
+  border-radius: 3px;
   margin-bottom: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
+  background: #bdbbb6;
+  box-shadow: inset 0px 8px 0px rgba(0, 0, 0, 0.25);
 `
 
 const Display = (props) => {
