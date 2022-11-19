@@ -1,4 +1,6 @@
-# Getting Started with Create React App
+# Styled Components Calculator
+
+![image](https://user-images.githubusercontent.com/51140256/202830149-5add8511-39bd-4896-be92-11e5a4164886.png)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
