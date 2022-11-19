@@ -6,6 +6,7 @@ import { useState } from 'react'
 import Middle from './layouts/Middle'
 import Model from './components/Model'
 import Main from './layouts/Main'
+import SolarCells from './components/SolarCells'
 
 const App = () => {
   const [input, setInput] = useState('0')
@@ -37,6 +38,7 @@ const App = () => {
   }
   return (
     <Main>
+      <SolarCells />
       <Display input={input} />
       <Middle>
         <Model />
