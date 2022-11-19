@@ -3,9 +3,10 @@ import './App.css'
 import LayoutButtons from './components/LayoutButtons'
 import Display from './components/Display'
 import { useState } from 'react'
-import SwitchOn from './components/SwitchOn'
 import Middle from './layouts/Middle'
 import Model from './components/Model'
+import Main from './layouts/Main'
+
 const App = () => {
   const [input, setInput] = useState('0')
   const [currentStack, setStack] = useState([])
@@ -35,7 +36,7 @@ const App = () => {
     }
   }
   return (
-    <div className='home'>
+    <Main>
       <Display input={input} />
       <Middle>
         <Model />
@@ -81,7 +82,7 @@ const App = () => {
         </Button>
         <Button onClick={() => handleClick('.')}>.</Button>
       </LayoutButtons>
-    </div>
+    </Main>
   )
 }
 
